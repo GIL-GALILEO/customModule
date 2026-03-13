@@ -1,61 +1,12 @@
 # CustomModule
 
-## Galileo Local Development
+## Galileo Note
 
-For Galileo work, this repository is only half of the setup.
-
-Use it together with:
+For Galileo local development, use this repository together with:
 
 - [GIL-GALILEO/primo-nde-devenv](https://github.com/GIL-GALILEO/primo-nde-devenv)
 
-Recommended local layout:
-
-```text
-your-workspace/
-  customModule/
-  primo-nde-devenv/
-```
-
-### Galileo Quick Start
-
-1. In `customModule`:
-
-```bash
-source ~/.profile
-nvm use
-npm install
-```
-
-2. In `primo-nde-devenv`, apply a view profile:
-
-```bash
-node scripts/dev-view.mjs --config config/views.json --view uga-nde --apply
-```
-
-or:
-
-```bash
-node scripts/dev-view.mjs --config config/views.json --view egsc-nde --apply
-```
-
-3. Back in `customModule`, start the proxy:
-
-```bash
-source ~/.profile
-nvm use
-npm run start:proxy
-```
-
-4. Open the matching local URL:
-
-- UGA: `http://localhost:4201/nde/home?vid=01GALI_UGA:UGA_NDE&lang=en`
-- EGSC: `http://localhost:4201/nde/home?vid=01GALI_EAGEORG:EGSC_NDE&lang=en`
-
-### Important Note
-
-Do not treat `customModule` as the place to store institution-specific branding by itself.
-
-For Galileo, institutional assets should live in `primo-nde-devenv/views/<view>/assets`, and the wrapper should apply them into this repo for local testing.
+The primary Galileo workflow, onboarding, and institution-switching documentation lives in the `primo-nde-devenv` README.
 
 ## ✨ New Feature (9th November 2025): Support for all customization files in assets folder:
 All files that are you are able to customize through the assets folder of your customization package are now supported for preview when using the custom module in proxy mode.
